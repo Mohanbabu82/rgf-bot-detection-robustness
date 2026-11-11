@@ -1,0 +1,17 @@
+dataset,perturbation,method,f1_mean,f1_std,f1_n
+cresci2015,metadata_mimicry,RGF (proposed),55.254682213068406,4.7938186551327675,3
+cresci2015,metadata_mimicry,RGF concat fusion,26.676506104829784,4.3722135134430715,3
+cresci2015,metadata_mimicry,RGF w/o gate (mean of experts),48.82741961616072,8.397782321938486,3
+cresci2015,metadata_mimicry,RGF w/o modality dropout,54.69961962713996,3.918165008620988,3
+cresci2015,missing_text,RGF (proposed),97.46851564125897,0.33665572655945153,3
+cresci2015,missing_text,RGF concat fusion,97.92796606142484,0.07404258088249413,3
+cresci2015,missing_text,RGF w/o gate (mean of experts),97.97508580282681,0.5219155243640411,3
+cresci2015,missing_text,RGF w/o modality dropout,97.21061187000282,0.3279298808353861,3
+cresci2017,metadata_mimicry,RGF (proposed),94.465641624381,0.596370516692745,3
+cresci2017,metadata_mimicry,RGF concat fusion,59.54466807351699,15.9526894151593,3
+cresci2017,metadata_mimicry,RGF w/o gate (mean of experts),88.89317591239522,2.777471992209207,3
+cresci2017,metadata_mimicry,RGF w/o modality dropout,95.9638314245392,0.5157913376284032,3
+cresci2017,missing_text,RGF (proposed),95.0405308509225,0.2997709052917436,3
+cresci2017,missing_text,RGF concat fusion,95.22273645152175,0.11541756392150505,3
+cresci2017,missing_text,RGF w/o gate (mean of experts),95.09847909600784,0.1338855146997373,3
+cresci2017,missing_text,RGF w/o modality dropout,94.76352787214427,0.40450592500350235,3

@@ -1,0 +1,23 @@
+\begin{table*}[!t]
+\centering
+\caption{Selective prediction: error (\%) on the most confident fraction of test accounts}
+\label{tab:selective_prediction}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Method} & \textbf{Err 100\% C-17} & \textbf{Err 90\% C-17} & \textbf{Err 80\% C-17} & \textbf{Err 100\% C-15} & \textbf{Err 90\% C-15} & \textbf{Err 80\% C-15} \\
+\hline
+LightGBM & 2.50 $\pm$ 0.26 & 0.70 $\pm$ 0.11 & 0.29 $\pm$ 0.09 & 2.43 $\pm$ 0.37 & 0.77 $\pm$ 0.18 & 0.49 $\pm$ 0.35 \\
+XGBoost & 2.43 $\pm$ 0.22 & 0.63 $\pm$ 0.09 & 0.25 $\pm$ 0.08 & 2.41 $\pm$ 0.31 & 0.71 $\pm$ 0.39 & 0.45 $\pm$ 0.33 \\
+Random forest & 3.13 $\pm$ 0.24 & 0.87 $\pm$ 0.12 & 0.51 $\pm$ 0.10 & 2.45 $\pm$ 0.19 & 0.75 $\pm$ 0.29 & 0.61 $\pm$ 0.27 \\
+GCN & 6.79 $\pm$ 0.21 & 3.80 $\pm$ 0.23 & 2.26 $\pm$ 0.22 & 3.43 $\pm$ 0.56 & 1.36 $\pm$ 0.58 & 0.78 $\pm$ 0.59 \\
+GraphSAGE & 2.71 $\pm$ 0.14 & 1.16 $\pm$ 0.15 & 0.63 $\pm$ 0.13 & 2.70 $\pm$ 0.33 & 0.65 $\pm$ 0.23 & 0.47 $\pm$ 0.26 \\
+GAT & 6.42 $\pm$ 0.27 & 3.53 $\pm$ 0.18 & 2.14 $\pm$ 0.29 & 3.49 $\pm$ 0.44 & 0.92 $\pm$ 0.20 & 0.49 $\pm$ 0.26 \\
+R-GCN (BotRGCN-style) & -- & -- & -- & 2.58 $\pm$ 0.57 & 0.80 $\pm$ 0.35 & 0.57 $\pm$ 0.39 \\
+Hybrid P1-h & 3.45 $\pm$ 0.26 & 1.25 $\pm$ 0.12 & 0.61 $\pm$ 0.17 & 2.04 $\pm$ 0.21 & 0.71 $\pm$ 0.26 & 0.42 $\pm$ 0.37 \\
+\textbf{RGF (proposed)} & \textbf{4.15 $\pm$ 0.43} & \textbf{1.86 $\pm$ 0.23} & \textbf{1.19 $\pm$ 0.21} & \textbf{2.56 $\pm$ 0.18} & \textbf{0.42 $\pm$ 0.25} & \textbf{0.31 $\pm$ 0.27} \\
+\hline
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Accounts ranked by |p - 0.5|; Err 100\% = 100 - accuracy. Temperature scaling does not change this ranking. Mean $\pm$ SD over 5 seeds.}
+\end{table*}

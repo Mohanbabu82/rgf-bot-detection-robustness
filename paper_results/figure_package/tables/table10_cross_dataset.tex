@@ -1,0 +1,32 @@
+\begin{table*}[!t]
+\centering
+\caption{Cross-dataset evaluation (\%, mean $\pm$ SD over seeds 0-2)}
+\label{tab:cross_dataset}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccc}
+\hline
+\textbf{Method} & \textbf{Accuracy} & \textbf{Human FPR} & \textbf{F1} & \textbf{MCC} & \textbf{ROC-AUC} \\
+\hline
+\multicolumn{6}{l}{\textit{Train Cresci-2015 $\rightarrow$ test Cresci-2017 (1507 bots, 695 humans, 672 shared accounts removed)}} \\
+LightGBM & 57.18 $\pm$ 2.73 & 2.49 $\pm$ 0.51 & 54.91 $\pm$ 4.02 & 37.66 $\pm$ 2.92 & 68.91 $\pm$ 4.03 \\
+GCN & 67.65 $\pm$ 1.60 & 4.89 $\pm$ 0.63 & 69.78 $\pm$ 2.01 & 47.72 $\pm$ 1.83 & 81.38 $\pm$ 3.31 \\
+GraphSAGE & 60.73 $\pm$ 5.58 & 2.64 $\pm$ 1.09 & 59.86 $\pm$ 8.06 & 41.53 $\pm$ 5.44 & 79.08 $\pm$ 1.55 \\
+Hybrid P1-h & 55.84 $\pm$ 0.61 & 3.55 $\pm$ 1.58 & 53.24 $\pm$ 0.83 & 35.30 $\pm$ 1.52 & 67.56 $\pm$ 1.28 \\
+Hybrid P1-p & 55.71 $\pm$ 2.84 & 3.31 $\pm$ 0.88 & 52.89 $\pm$ 4.29 & 35.34 $\pm$ 3.16 & 72.25 $\pm$ 1.95 \\
+Hybrid P3-h & 58.75 $\pm$ 2.09 & 4.94 $\pm$ 1.88 & 58.00 $\pm$ 2.35 & 37.43 $\pm$ 3.78 & 77.51 $\pm$ 6.12 \\
+Hybrid P3-p & 66.61 $\pm$ 1.93 & 4.60 $\pm$ 1.14 & 68.45 $\pm$ 2.18 & 46.69 $\pm$ 2.74 & 78.48 $\pm$ 2.14 \\
+\textbf{RGF (proposed)} & \textbf{66.24 $\pm$ 1.26} & \textbf{3.26 $\pm$ 0.79} & \textbf{67.72 $\pm$ 1.62} & \textbf{47.17 $\pm$ 1.39} & \textbf{81.40 $\pm$ 2.83} \\
+\multicolumn{6}{l}{\textit{Train Cresci-2017 $\rightarrow$ test Cresci-2015 (0 bots, 390 humans, 671 shared accounts removed)}} \\
+LightGBM & 46.50 $\pm$ 3.34 & 53.50 $\pm$ 3.34 & -- & -- & -- \\
+GCN & 14.79 $\pm$ 2.14 & 85.21 $\pm$ 2.14 & -- & -- & -- \\
+GraphSAGE & 21.28 $\pm$ 3.85 & 78.72 $\pm$ 3.85 & -- & -- & -- \\
+Hybrid P1-h & 29.66 $\pm$ 0.90 & 70.34 $\pm$ 0.90 & -- & -- & -- \\
+Hybrid P1-p & 29.23 $\pm$ 3.45 & 70.77 $\pm$ 3.45 & -- & -- & -- \\
+Hybrid P3-h & 23.42 $\pm$ 0.65 & 76.58 $\pm$ 0.65 & -- & -- & -- \\
+Hybrid P3-p & 16.92 $\pm$ 3.70 & 83.08 $\pm$ 3.70 & -- & -- & -- \\
+\textbf{RGF (proposed)} & \textbf{17.52 $\pm$ 1.71} & \textbf{82.48 $\pm$ 1.71} & \textbf{--} & \textbf{--} & \textbf{--} \\
+\hline
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Human FPR = humans classified as bots / all humans. Removing accounts shared by the two datasets (by user ID) removes every Cresci-2015 test bot, so the Cresci-2017 $\rightarrow$ Cresci-2015 direction measures only false positives on 390 humans; F1, MCC and ROC-AUC are undefined there.}
+\end{table*}

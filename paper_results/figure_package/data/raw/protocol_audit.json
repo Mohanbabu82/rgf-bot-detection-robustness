@@ -1,0 +1,242 @@
+[
+ {
+  "dataset": "cresci2017",
+  "check": "labels are 0/1 only",
+  "status": "PASS",
+  "evidence": "values [0, 1]"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "account IDs unique",
+  "status": "PASS",
+  "evidence": "14368 rows, 14368 unique IDs"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "Cresci-2017: only genuine_accounts labelled human (explicit map)",
+  "status": "PASS",
+  "evidence": "human groups: ['genuine_accounts']"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "Cresci-2017: fake_followers labelled bot",
+  "status": "PASS",
+  "evidence": "3351 fake_followers accounts"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "Cresci-2017: group sizes match the published sizes",
+  "status": "FAIL",
+  "evidence": "loaded {'genuine_accounts': 3474, 'social_spambots_1': 991, 'social_spambots_2': 3457, 'social_spambots_3': 464, 'traditional_spambots_1': 1000, 'traditional_spambots_2': 100, 'traditional_spambots_3': 403, 'traditional_spambots_4': 1128, 'fake_followers': 3351} vs published {'genuine_accounts': 3474, 'social_spambots_1': 991, 'social_spambots_2': 3457, 'social_spambots_3': 464, 'traditional_spambots_1': 1000, 'traditional_spambots_2': 100, 'traditional_spambots_3': 433, 'traditional_spambots_4': 1128, 'fake_followers': 3351}"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] train/val/test disjoint",
+  "status": "PASS",
+  "evidence": "10057/1437/2874 of 14368"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] cresci2017 split is 70/10/20",
+  "status": "PASS",
+  "evidence": "shares [0.7, 0.1, 0.2]"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] stratified (bot share equal across splits)",
+  "status": "PASS",
+  "evidence": "bot share train/val/test [0.758, 0.759, 0.758]"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] test labels hidden from all fitting",
+  "status": "PASS",
+  "evidence": "y_view[test] == -1"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] metadata scaler fitted on training rows only",
+  "status": "PASS",
+  "evidence": "fit rows 10057"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] test accounts present in the graph (features only, no labels)",
+  "status": "PASS",
+  "evidence": "test nodes in training graph: True (expected in transductive)"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[transductive] graph statistics",
+  "status": "PASS",
+  "evidence": "edges 181018, edge homophily on training nodes 0.894, isolated test share 0.000, text missing in test 0.406"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] train/val/test disjoint",
+  "status": "PASS",
+  "evidence": "10057/1437/2874 of 14368"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] cresci2017 split is 70/10/20",
+  "status": "PASS",
+  "evidence": "shares [0.7, 0.1, 0.2]"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] stratified (bot share equal across splits)",
+  "status": "PASS",
+  "evidence": "bot share train/val/test [0.758, 0.759, 0.758]"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] test labels hidden from all fitting",
+  "status": "PASS",
+  "evidence": "y_view[test] == -1"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] metadata scaler fitted on training rows only",
+  "status": "PASS",
+  "evidence": "fit rows 10057"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] test accounts absent from the training graph",
+  "status": "PASS",
+  "evidence": "test nodes in training graph: False"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] test accounts send no messages to training accounts",
+  "status": "PASS",
+  "evidence": "test->seen edges: False"
+ },
+ {
+  "dataset": "cresci2017",
+  "check": "[inductive] graph statistics",
+  "status": "PASS",
+  "evidence": "edges 145470, edge homophily on training nodes 0.893, isolated test share 0.000, text missing in test 0.406"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "labels are 0/1 only",
+  "status": "PASS",
+  "evidence": "values [0, 1]"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "account IDs unique",
+  "status": "PASS",
+  "evidence": "5301 rows, 5301 unique IDs"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "Cresci-2015: labels follow the group map (E13, TFP human; FSF, INT, TWT bot)",
+  "status": "PASS",
+  "evidence": "groups ['E13', 'FSF', 'INT', 'TFP', 'TWT']"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "Cresci-2015: group sizes match the published sizes",
+  "status": "PASS",
+  "evidence": "loaded {'E13': 1481, 'TFP': 469, 'FSF': 1169, 'INT': 1337, 'TWT': 845} vs published {'E13': 1481, 'TFP': 469, 'FSF': 1169, 'INT': 1337, 'TWT': 845}"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "Cresci-2015: follower/friend graph among labelled accounts present",
+  "status": "PASS",
+  "evidence": "7108 directed edges, 3381 isolated accounts"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] train/val/test disjoint",
+  "status": "PASS",
+  "evidence": "3710/530/1061 of 5301"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] cresci2015 split is 70/10/20",
+  "status": "PASS",
+  "evidence": "shares [0.7, 0.1, 0.2]"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] stratified (bot share equal across splits)",
+  "status": "PASS",
+  "evidence": "bot share train/val/test [0.632, 0.632, 0.632]"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] test labels hidden from all fitting",
+  "status": "PASS",
+  "evidence": "y_view[test] == -1"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] metadata scaler fitted on training rows only",
+  "status": "PASS",
+  "evidence": "fit rows 3710"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] test accounts present in the graph (features only, no labels)",
+  "status": "PASS",
+  "evidence": "test nodes in training graph: True (expected in transductive)"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[transductive] graph statistics",
+  "status": "PASS",
+  "evidence": "edges 8550, edge homophily on training nodes 0.973, isolated test share 0.643, text missing in test 0.210"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] train/val/test disjoint",
+  "status": "PASS",
+  "evidence": "3710/530/1061 of 5301"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] cresci2015 split is 70/10/20",
+  "status": "PASS",
+  "evidence": "shares [0.7, 0.1, 0.2]"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] stratified (bot share equal across splits)",
+  "status": "PASS",
+  "evidence": "bot share train/val/test [0.632, 0.632, 0.632]"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] test labels hidden from all fitting",
+  "status": "PASS",
+  "evidence": "y_view[test] == -1"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] metadata scaler fitted on training rows only",
+  "status": "PASS",
+  "evidence": "fit rows 3710"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] test accounts absent from the training graph",
+  "status": "PASS",
+  "evidence": "test nodes in training graph: False"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] test accounts send no messages to training accounts",
+  "status": "PASS",
+  "evidence": "test->seen edges: False"
+ },
+ {
+  "dataset": "cresci2015",
+  "check": "[inductive] graph statistics",
+  "status": "PASS",
+  "evidence": "edges 5688, edge homophily on training nodes 0.973, isolated test share 0.671, text missing in test 0.210"
+ }
+]

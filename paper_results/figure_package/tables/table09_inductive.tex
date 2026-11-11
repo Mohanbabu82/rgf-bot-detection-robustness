@@ -1,0 +1,28 @@
+\begin{table*}[!t]
+\centering
+\caption{Transductive versus inductive evaluation (\%, mean $\pm$ SD over 5 seeds)}
+\label{tab:inductive}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccc}
+\hline
+\textbf{Method} & \textbf{F1 trans.} & \textbf{F1 induct.} & \textbf{MCC trans.} & \textbf{MCC induct.} & \textbf{$\Delta$MCC} \\
+\hline
+\multicolumn{6}{l}{\textit{Cresci-2017 (5 seeds)}} \\
+LightGBM & 98.34 $\pm$ 0.18 & 98.34 $\pm$ 0.18 & 93.34 $\pm$ 0.69 & 93.34 $\pm$ 0.69 & +0.00 \\
+GCN & 95.51 $\pm$ 0.15 & 95.11 $\pm$ 0.18 & 81.61 $\pm$ 0.47 & 79.61 $\pm$ 0.69 & -2.00 \\
+GraphSAGE & 98.22 $\pm$ 0.09 & 98.08 $\pm$ 0.09 & 92.61 $\pm$ 0.40 & 92.01 $\pm$ 0.36 & -0.59 \\
+GAT & 95.76 $\pm$ 0.17 & 95.11 $\pm$ 0.27 & 82.58 $\pm$ 0.84 & 79.62 $\pm$ 1.29 & -2.96 \\
+Hybrid P1-h & 97.71 $\pm$ 0.18 & 97.74 $\pm$ 0.15 & 90.73 $\pm$ 0.70 & 90.78 $\pm$ 0.62 & +0.05 \\
+\textbf{RGF (proposed)} & \textbf{97.28 $\pm$ 0.28} & \textbf{97.28 $\pm$ 0.15} & \textbf{88.59 $\pm$ 1.20} & \textbf{88.54 $\pm$ 0.64} & \textbf{-0.05} \\
+\multicolumn{6}{l}{\textit{Cresci-2015 (5 seeds)}} \\
+LightGBM & 98.08 $\pm$ 0.28 & 98.08 $\pm$ 0.28 & 94.77 $\pm$ 0.80 & 94.77 $\pm$ 0.80 & +0.00 \\
+GCN & 97.31 $\pm$ 0.43 & 97.31 $\pm$ 0.39 & 92.61 $\pm$ 1.21 & 92.61 $\pm$ 1.10 & +0.00 \\
+GraphSAGE & 97.89 $\pm$ 0.26 & 97.77 $\pm$ 0.33 & 94.20 $\pm$ 0.72 & 93.88 $\pm$ 0.90 & -0.33 \\
+GAT & 97.29 $\pm$ 0.33 & 97.13 $\pm$ 0.37 & 92.51 $\pm$ 0.92 & 92.07 $\pm$ 1.05 & -0.44 \\
+Hybrid P1-h & 98.39 $\pm$ 0.16 & 98.29 $\pm$ 0.09 & 95.63 $\pm$ 0.45 & 95.34 $\pm$ 0.25 & -0.29 \\
+\textbf{RGF (proposed)} & \textbf{97.98 $\pm$ 0.15} & \textbf{97.64 $\pm$ 0.46} & \textbf{94.49 $\pm$ 0.39} & \textbf{93.60 $\pm$ 1.27} & \textbf{-0.88} \\
+\hline
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Inductive: test accounts are absent from the training graph and send no messages to seen accounts. Tree models do not use the graph, so both columns are identical. R-GCN, XGBoost and random forest were not run inductively.}
+\end{table*}

@@ -1,0 +1,35 @@
+FIGURE 1. Research framework. Two Cresci benchmarks are split into stratified 70/10/20 partitions over five seeds, with all transformations fitted on training rows and test labels masked. Metadata, profile-text and graph features feed tree, graph-neural-network and hybrid baselines and the proposed reliability-gated fusion (RGF) model. Models trained on clean data are evaluated under test-time perturbations and by discrimination, probability-quality, inductive, cross-dataset and statistical analyses.
+  files: Fig01_research_framework.pdf/.svg (vector), .png/.tif (600 dpi, 4320x1854 px = 7.20 x 3.09 in)
+
+FIGURE 2. Architecture of RGF. Three experts produce class logits; the text and graph experts are multiplied by their availability flags. A gate network maps six reliability signals (availability flags, scaled log-degree and the gradient-stopped entropy of each expert) to scores, a softmax restricted to the available experts gives the weights, and the fused logits are the weighted sum of expert logits divided by a temperature T fitted on validation data.
+  files: Fig02_rgf_architecture.pdf/.svg (vector), .png/.tif (600 dpi, 4320x2274 px = 7.20 x 3.79 in)
+
+FIGURE 3. Training workflow of RGF: per-account modality dropout (p = 0.3; metadata never dropped), fused plus auxiliary expert cross-entropy (λ = 0.5), full-batch AdamW updates, early stopping on validation cross-entropy (patience 40, at most 300 epochs) and temperature selection on the same validation split.
+  files: Fig03_training_workflow.pdf/.svg (vector), .png/.tif (600 dpi, 4320x1794 px = 7.20 x 2.99 in)
+
+FIGURE 4. Evaluation protocol. Each model is trained once per dataset and seed on clean data and evaluated on seven axes. Perturbations affect test accounts only, and the graph is not rebuilt.
+  files: Fig04_evaluation_framework.pdf/.svg (vector), .png/.tif (600 dpi, 4320x1824 px = 7.20 x 3.04 in)
+
+FIGURE 5. Clean test performance on Cresci-2017 (circles) and Cresci-2015 (squares): (a) bot-class F1, (b) MCC, (c) ROC-AUC. Markers show means and bars ± 1 SD over five seeds; the R-GCN runs on Cresci-2015 only.
+  files: Fig05_clean_performance.pdf/.svg (vector), .png/.tif (600 dpi, 4176x1581 px = 6.96 x 2.63 in)
+
+FIGURE 6. Ablation of RGF. (a) Clean bot-class F1 and (b) clean MCC of the full model and its seven ablations (mean ± SD, five seeds). (c) Bot-class F1 at full metadata mimicry and full text removal for the three ablations evaluated under perturbation (three seeds).
+  files: Fig06_ablation.pdf/.svg (vector), .png/.tif (600 dpi, 4176x1621 px = 6.96 x 2.70 in)
+
+FIGURE 7. Accuracy is not robustness. (a, b) Bot-class F1 when a fraction ρ of test bots receive the median metadata of training humans (mean ± SD band, three seeds; models trained on clean data). (c, d) Rank of each model by F1 on clean data and under full mimicry, with F1 values (%). On Cresci-2017 the metadata-derived kNN graph is not rebuilt after the attack, which favours graph-based models (Section VII-C).
+  files: Fig07_accuracy_vs_robustness.pdf/.svg (vector), .png/.tif (600 dpi, 3828x2434 px = 6.38 x 4.06 in)
+
+FIGURE 8. Bot-class F1 when the profile text of a fraction ρ of test accounts is removed (mean ± SD band, three seeds).
+  files: Fig08_missing_text.pdf/.svg (vector), .png/.tif (600 dpi, 4176x1505 px = 6.96 x 2.51 in)
+
+FIGURE 9. Bot-class F1 under (a, c) deletion of a fraction ρ of the edges incident to test accounts and (b, d) injection of round(ρ × degree) random edges per test account (mean ± SD band, three seeds). LightGBM (dashed) uses no graph and serves as a constant reference; Cresci-2017 edges come from the metadata kNN graph.
+  files: Fig09_graph_perturbation.pdf/.svg (vector), .png/.tif (600 dpi, 4175x2588 px = 6.96 x 4.31 in)
+
+FIGURE 10. Cross-dataset transfer (three seeds). (a) Trained on Cresci-2015 and tested on Cresci-2017 (1,507 bots, 695 humans after removing shared accounts). (b) Percentage of humans classified as bots in both directions; the Cresci-2017 → Cresci-2015 test set contains only humans after shared accounts are removed.
+  files: Fig10_cross_dataset.pdf/.svg (vector), .png/.tif (600 dpi, 4176x1280 px = 6.96 x 2.13 in)
+
+FIGURE 11. Probability quality on the test split (mean ± SD, five seeds): (a) expected calibration error (logarithmic axis; hollow markers show RGF before temperature scaling), (b) Brier score, (c, d) error on the 80% and 90% most confident test accounts.
+  files: Fig11_calibration_selective.pdf/.svg (vector), .png/.tif (600 dpi, 4177x1595 px = 6.96 x 2.66 in)
+
+FIGURE 12. Cost on a CPU (mean ± SD, five seeds, transductive): (a) training time, (b) inference time per 1,000 accounts, (c) model size as trainable parameters (neural models) or number of trees (tree models). RGF uses 38,089 of its 50,571 registered parameters.
+  files: Fig12_computational_cost.pdf/.svg (vector), .png/.tif (600 dpi, 4169x1680 px = 6.95 x 2.80 in)

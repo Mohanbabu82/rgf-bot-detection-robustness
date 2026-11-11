@@ -1,0 +1,44 @@
+\begin{table*}[!t]
+\centering
+\caption{Bot-class F1 (\%) under graph perturbation of test accounts}
+\label{tab:graph_perturbation}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccccc}
+\hline
+\textbf{Method} & \textbf{Perturbation} & \textbf{$\rho$ = 0\%} & \textbf{$\rho$ = 25\%} & \textbf{$\rho$ = 50\%} & \textbf{$\rho$ = 75\%} & \textbf{$\rho$ = 100\%} & \textbf{$\Delta$ (100\% - 0\%)} \\
+\hline
+\multicolumn{8}{l}{\textit{Cresci-2017 (3 seeds)}} \\
+LightGBM & edge deletion & 98.24 $\pm$ 0.16 & 98.24 $\pm$ 0.16 & 98.24 $\pm$ 0.16 & 98.24 $\pm$ 0.16 & 98.24 $\pm$ 0.16 & +0.00 \\
+GCN & edge deletion & 95.48 $\pm$ 0.20 & 95.57 $\pm$ 0.19 & 95.60 $\pm$ 0.18 & 95.53 $\pm$ 0.46 & 92.37 $\pm$ 0.83 & -3.11 \\
+GraphSAGE & edge deletion & 98.17 $\pm$ 0.09 & 98.17 $\pm$ 0.12 & 98.06 $\pm$ 0.07 & 97.50 $\pm$ 0.08 & 95.02 $\pm$ 0.32 & -3.16 \\
+GAT & edge deletion & 95.84 $\pm$ 0.11 & 95.75 $\pm$ 0.07 & 95.48 $\pm$ 0.10 & 95.39 $\pm$ 0.32 & 92.12 $\pm$ 0.31 & -3.71 \\
+Hybrid P1-h & edge deletion & 97.64 $\pm$ 0.05 & 97.58 $\pm$ 0.08 & 97.54 $\pm$ 0.11 & 97.33 $\pm$ 0.18 & 96.33 $\pm$ 0.15 & -1.31 \\
+\textbf{RGF (proposed)} & \textbf{edge deletion} & \textbf{97.28 $\pm$ 0.32} & \textbf{97.24 $\pm$ 0.21} & \textbf{97.24 $\pm$ 0.14} & \textbf{96.97 $\pm$ 0.23} & \textbf{96.49 $\pm$ 0.29} & \textbf{-0.80} \\
+\multicolumn{8}{l}{\textit{Cresci-2015 (3 seeds)}} \\
+LightGBM & edge deletion & 98.02 $\pm$ 0.36 & 98.02 $\pm$ 0.36 & 98.02 $\pm$ 0.36 & 98.02 $\pm$ 0.36 & 98.02 $\pm$ 0.36 & +0.00 \\
+GCN & edge deletion & 97.46 $\pm$ 0.36 & 97.42 $\pm$ 0.39 & 97.25 $\pm$ 0.43 & 97.05 $\pm$ 0.61 & 96.62 $\pm$ 0.48 & -0.84 \\
+GraphSAGE & edge deletion & 97.96 $\pm$ 0.33 & 97.84 $\pm$ 0.38 & 97.67 $\pm$ 0.33 & 97.39 $\pm$ 0.51 & 96.96 $\pm$ 0.44 & -1.00 \\
+GAT & edge deletion & 97.43 $\pm$ 0.24 & 97.27 $\pm$ 0.29 & 97.06 $\pm$ 0.32 & 96.86 $\pm$ 0.43 & 96.21 $\pm$ 0.35 & -1.22 \\
+R-GCN (BotRGCN-style) & edge deletion & 97.85 $\pm$ 0.46 & 97.78 $\pm$ 0.51 & 97.63 $\pm$ 0.41 & 97.35 $\pm$ 0.44 & 96.99 $\pm$ 0.47 & -0.87 \\
+Hybrid P1-h & edge deletion & 98.33 $\pm$ 0.16 & 98.33 $\pm$ 0.11 & 98.29 $\pm$ 0.26 & 98.31 $\pm$ 0.29 & 98.19 $\pm$ 0.37 & -0.14 \\
+\textbf{RGF (proposed)} & \textbf{edge deletion} & \textbf{98.07 $\pm$ 0.07} & \textbf{98.00 $\pm$ 0.20} & \textbf{97.83 $\pm$ 0.21} & \textbf{97.62 $\pm$ 0.36} & \textbf{97.31 $\pm$ 0.37} & \textbf{-0.76} \\
+\multicolumn{8}{l}{\textit{Cresci-2017 (3 seeds)}} \\
+LightGBM & edge injection & 98.24 $\pm$ 0.16 & 98.24 $\pm$ 0.16 & 98.24 $\pm$ 0.16 & -- & 98.24 $\pm$ 0.16 & +0.00 \\
+GCN & edge injection & 95.48 $\pm$ 0.20 & 95.11 $\pm$ 0.20 & 94.44 $\pm$ 0.06 & -- & 92.47 $\pm$ 0.45 & -3.01 \\
+GraphSAGE & edge injection & 98.17 $\pm$ 0.09 & 97.98 $\pm$ 0.18 & 97.76 $\pm$ 0.12 & -- & 97.36 $\pm$ 0.10 & -0.82 \\
+GAT & edge injection & 95.84 $\pm$ 0.11 & 95.18 $\pm$ 0.37 & 94.57 $\pm$ 0.35 & -- & 93.33 $\pm$ 0.25 & -2.51 \\
+Hybrid P1-h & edge injection & 97.64 $\pm$ 0.05 & 97.60 $\pm$ 0.11 & 97.54 $\pm$ 0.16 & -- & 97.20 $\pm$ 0.21 & -0.44 \\
+\textbf{RGF (proposed)} & \textbf{edge injection} & \textbf{97.28 $\pm$ 0.32} & \textbf{97.17 $\pm$ 0.39} & \textbf{97.00 $\pm$ 0.22} & \textbf{--} & \textbf{96.64 $\pm$ 0.44} & \textbf{-0.64} \\
+\multicolumn{8}{l}{\textit{Cresci-2015 (3 seeds)}} \\
+LightGBM & edge injection & 98.02 $\pm$ 0.36 & 98.02 $\pm$ 0.36 & 98.02 $\pm$ 0.36 & -- & 98.02 $\pm$ 0.36 & +0.00 \\
+GCN & edge injection & 97.46 $\pm$ 0.36 & 93.10 $\pm$ 0.74 & 90.88 $\pm$ 0.93 & -- & 86.78 $\pm$ 1.56 & -10.68 \\
+GraphSAGE & edge injection & 97.96 $\pm$ 0.33 & 95.59 $\pm$ 0.52 & 93.53 $\pm$ 0.58 & -- & 93.03 $\pm$ 0.54 & -4.94 \\
+GAT & edge injection & 97.43 $\pm$ 0.24 & 93.54 $\pm$ 0.44 & 90.56 $\pm$ 1.23 & -- & 86.66 $\pm$ 2.31 & -10.77 \\
+R-GCN (BotRGCN-style) & edge injection & 97.85 $\pm$ 0.46 & 96.35 $\pm$ 0.57 & 94.96 $\pm$ 1.08 & -- & 93.65 $\pm$ 0.39 & -4.20 \\
+Hybrid P1-h & edge injection & 98.33 $\pm$ 0.16 & 97.70 $\pm$ 0.20 & 96.87 $\pm$ 0.62 & -- & 95.89 $\pm$ 0.98 & -2.44 \\
+\textbf{RGF (proposed)} & \textbf{edge injection} & \textbf{98.07 $\pm$ 0.07} & \textbf{95.63 $\pm$ 0.29} & \textbf{94.49 $\pm$ 0.54} & \textbf{--} & \textbf{93.61 $\pm$ 0.63} & \textbf{-4.46} \\
+\hline
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize Edge deletion removes each edge incident to a test account with probability $\rho$; edge injection adds round($\rho$ $\times$ degree) random edges per test account ($\rho$ $\in$ {0, 25, 50, 100}\%). LightGBM uses no graph and is unaffected. Cresci-2017 edges come from the metadata kNN graph. Mean $\pm$ SD over seeds 0-2.}
+\end{table*}

@@ -1,0 +1,21 @@
+TABLE X. Reliability-gate weights of RGF and accuracy of each expert alone
+
+| Group | n | w meta | w text | w graph |
+|---|---|---|---|---|
+| **Cresci-2017 — mean gate weight (seeds 0-2)** |  |  |  |  |
+| All test accounts | 2874 | 0.165 ± 0.005 | 0.277 ± 0.019 | 0.559 ± 0.023 |
+| Bots | 2179 | 0.187 ± 0.006 | 0.231 ± 0.013 | 0.581 ± 0.019 |
+| Humans | 695 | 0.093 ± 0.001 | 0.419 ± 0.037 | 0.488 ± 0.037 |
+| Text missing | 1161 | 0.263 ± 0.012 | 0.000 ± 0.000 | 0.737 ± 0.012 |
+| **Cresci-2017 — each expert alone, accounts where its modality exists: F1 / MCC (%)** |  |  |  |  |
+| Expert alone |  | 93.28 / 72.10 (n = 2874) | 86.50 / 64.33 (n = 1713) | 95.47 / 82.08 (n = 2874) |
+| **Cresci-2015 — mean gate weight (seeds 0-2)** |  |  |  |  |
+| All test accounts | 1061 | 0.453 ± 0.040 | 0.290 ± 0.015 | 0.257 ± 0.026 |
+| Bots | 671 | 0.549 ± 0.046 | 0.311 ± 0.035 | 0.141 ± 0.012 |
+| Humans | 390 | 0.289 ± 0.036 | 0.253 ± 0.041 | 0.458 ± 0.052 |
+| Text missing | 238 | 0.905 ± 0.007 | 0.000 ± 0.000 | 0.095 ± 0.007 |
+| No graph link | 676 | 0.606 ± 0.042 | 0.394 ± 0.042 | 0.000 ± 0.000 |
+| **Cresci-2015 — each expert alone, accounts where its modality exists: F1 / MCC (%)** |  |  |  |  |
+| Expert alone |  | 96.76 / 91.02 (n = 1061) | 87.55 / 70.94 (n = 823) | 98.78 / 98.12 (n = 385) |
+
+*Weights are averaged over accounts, then over seeds. Unavailable experts receive weight 0 by construction (text-missing and isolated rows). Gate weights describe what the model relies on, not which modality is correct.*

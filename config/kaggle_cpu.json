@@ -1,0 +1,14 @@
+{
+  "_comment": "Experiment configuration for the Kaggle CPU notebook. null paths are auto-detected under input_dir.",
+  "input_dir": "/kaggle/input",
+  "work_dir": "/kaggle/working",
+  "paths": {"cresci2017": null, "cresci2015": null},
+  "session_budget_minutes": 40,
+  "threads": null,
+  "seeds": [0, 1, 2, 3, 4],
+  "robust_seeds": [0, 1, 2],
+  "checkpoint_seeds": [0],
+  "text_variant": "B",
+  "run_bert_tweets": false,
+  "walkthrough": {"dataset": "auto", "seed": 0}
+}

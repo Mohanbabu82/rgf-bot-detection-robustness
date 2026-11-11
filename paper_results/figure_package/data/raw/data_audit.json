@@ -1,0 +1,149 @@
+{
+ "cresci2017": {
+  "label_rule": "explicit",
+  "groups": {
+   "genuine_accounts": {
+    "found": true,
+    "rows": 3474,
+    "label": 0,
+    "published_size": 3474,
+    "has_tweets_file": true
+   },
+   "social_spambots_1": {
+    "found": true,
+    "rows": 991,
+    "label": 1,
+    "published_size": 991,
+    "has_tweets_file": true
+   },
+   "social_spambots_2": {
+    "found": true,
+    "rows": 3457,
+    "label": 1,
+    "published_size": 3457,
+    "has_tweets_file": true
+   },
+   "social_spambots_3": {
+    "found": true,
+    "rows": 464,
+    "label": 1,
+    "published_size": 464,
+    "has_tweets_file": true
+   },
+   "traditional_spambots_1": {
+    "found": true,
+    "rows": 1000,
+    "label": 1,
+    "published_size": 1000,
+    "has_tweets_file": true
+   },
+   "traditional_spambots_2": {
+    "found": true,
+    "rows": 100,
+    "label": 1,
+    "published_size": 100,
+    "has_tweets_file": false
+   },
+   "traditional_spambots_3": {
+    "found": true,
+    "rows": 403,
+    "label": 1,
+    "published_size": 433,
+    "has_tweets_file": false
+   },
+   "traditional_spambots_4": {
+    "found": true,
+    "rows": 1128,
+    "label": 1,
+    "published_size": 1128,
+    "has_tweets_file": false
+   },
+   "fake_followers": {
+    "found": true,
+    "rows": 3351,
+    "label": 1,
+    "published_size": 3351,
+    "has_tweets_file": true
+   }
+  },
+  "rows_before_dedup": 14368,
+  "conflicting_ids_dropped": 0,
+  "rows_after_dedup": 14368,
+  "n": 14368,
+  "n_bot": 10894,
+  "n_human": 3474,
+  "bot_share": 0.7582,
+  "empty_bio": {
+   "empty_text_rate_bot": 0.4924729208738755,
+   "empty_text_rate_human": 0.10909614277489925
+  }
+ },
+ "cresci2015": {
+  "groups": {
+   "E13": {
+    "found": true,
+    "rows": 1481,
+    "label": 0,
+    "published_size": 1481,
+    "relation_files": [
+     "followers.csv",
+     "friends.csv"
+    ]
+   },
+   "TFP": {
+    "found": true,
+    "rows": 469,
+    "label": 0,
+    "published_size": 469,
+    "relation_files": [
+     "followers.csv",
+     "friends.csv"
+    ]
+   },
+   "FSF": {
+    "found": true,
+    "rows": 1169,
+    "label": 1,
+    "published_size": 1169,
+    "relation_files": [
+     "followers.csv",
+     "friends.csv"
+    ]
+   },
+   "INT": {
+    "found": true,
+    "rows": 1337,
+    "label": 1,
+    "published_size": 1337,
+    "relation_files": [
+     "followers.csv",
+     "friends.csv"
+    ]
+   },
+   "TWT": {
+    "found": true,
+    "rows": 845,
+    "label": 1,
+    "published_size": 845,
+    "relation_files": [
+     "followers.csv",
+     "friends.csv"
+    ]
+   }
+  },
+  "rows_before_dedup": 5301,
+  "conflicting_ids_dropped": 0,
+  "rows_after_dedup": 5301,
+  "n": 5301,
+  "n_bot": 3351,
+  "n_human": 1950,
+  "relation_rows_read": 4258377,
+  "directed_edges_among_labelled": 7108,
+  "isolated_nodes": 3381,
+  "bot_share": 0.6321,
+  "empty_bio": {
+   "empty_text_rate_bot": 0.3202029245001492,
+   "empty_text_rate_human": 0.07435897435897436
+  }
+ }
+}

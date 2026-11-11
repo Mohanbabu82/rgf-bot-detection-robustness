@@ -1,0 +1,16 @@
+### TABLE 3. Model architectures and hyper-parameters
+
+| Model | Inputs | Configuration |
+|---|---|---|
+| LightGBM | meta+text | gbdt, 31 leaves, lr 0.05, ≤ 1000 trees, early stop 50 (val log-loss) |
+| XGBoost | meta+text | ≤ 1000 trees, lr 0.05, depth 6, subsample 0.9, colsample 0.9, hist, early stop 50 |
+| Random forest | meta+text | 500 trees, scikit-learn defaults, no class weights |
+| GCN | meta+text, graph | 2 layers d→64→2, ReLU, dropout 0.5, sym.-normalised A + I |
+| GraphSAGE | meta+text, graph | 2 layers, mean aggregator, 64 hidden, ReLU, dropout 0.5 |
+| GAT | meta+text, graph | 4 heads × 16, ELU; output 1 head; dropout 0.5; self-loops |
+| R-GCN (BotRGCN-style) | meta+text, 2 relations | proj. 64, 2 relational layers, MLP 64→64→2, dropout 0.3 (Cresci-2015 only) |
+| Hybrid P1 / P3 | meta+text, graph | GCN (half A of train, 100 epochs) → LightGBM (half B); P1 = [meta, text, GCN], P3 = GCN only |
+| Neural training | — | full batch, AdamW, wd 5×10⁻⁴, lr 0.01 (GAT 0.005), ≤ 200 epochs, patience 30 |
+| RGF (proposed) | meta, text, graph | experts h = 64, dropout 0.3; gate 6→32→3; λ = 0.5; modality dropout 0.3; AdamW lr 0.005, wd 5×10⁻⁴, ≤ 300 epochs, patience 40; temperature grid 60 values in [0.25, 5] |
+
+*All values are fixed in code (methods.py, nn.py); none was tuned. The hybrid reported in the main tables is P1 with the GCN's 64-d hidden layer, the best of four variants by mean validation F1 on both datasets.*

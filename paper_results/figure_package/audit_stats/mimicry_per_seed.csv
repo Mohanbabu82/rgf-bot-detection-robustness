@@ -1,0 +1,57 @@
+dataset,method,level,0,1,2
+cresci2015,GAT,0.0,97.29,97.71,97.3
+cresci2015,GAT,0.25,91.23,91.72,89.73
+cresci2015,GAT,0.5,83.65,82.94,78.9
+cresci2015,GAT,1.0,64.15,62.77,55.2
+cresci2015,LightGBM (meta+text),0.0,98.05,98.36,97.63
+cresci2015,LightGBM (meta+text),0.25,83.69,83.79,83.5
+cresci2015,LightGBM (meta+text),0.5,64.88,65.28,64.58
+cresci2015,LightGBM (meta+text),1.0,0.0,0.0,0.0
+cresci2015,RGF (proposed),0.0,98.14,98.07,98.01
+cresci2015,RGF (proposed),0.25,90.24,91.36,89.97
+cresci2015,RGF (proposed),0.5,79.86,82.6,78.02
+cresci2015,RGF (proposed),1.0,54.2,60.49,51.08
+cresci2015,RGF concat fusion,0.0,98.59,98.37,98.3
+cresci2015,RGF concat fusion,0.25,87.37,86.66,87.47
+cresci2015,RGF concat fusion,0.5,73.12,69.84,71.23
+cresci2015,RGF concat fusion,1.0,28.86,21.64,29.53
+cresci2015,RGF w/o gate (mean of experts),0.0,98.29,98.44,98.3
+cresci2015,RGF w/o gate (mean of experts),0.25,88.16,90.0,91.04
+cresci2015,RGF w/o gate (mean of experts),0.5,75.45,80.07,80.1
+cresci2015,RGF w/o gate (mean of experts),1.0,39.58,50.93,55.97
+cresci2015,RGF w/o modality dropout,0.0,97.93,98.22,97.71
+cresci2015,RGF w/o modality dropout,0.25,89.62,91.18,90.0
+cresci2015,RGF w/o modality dropout,0.5,79.2,82.5,78.63
+cresci2015,RGF w/o modality dropout,1.0,52.03,59.2,52.87
+cresci2015,"Reconstructed hybrid (P1, hidden)",0.0,98.43,98.43,98.14
+cresci2015,"Reconstructed hybrid (P1, hidden)",0.25,84.13,83.8,83.93
+cresci2015,"Reconstructed hybrid (P1, hidden)",0.5,65.54,65.07,64.96
+cresci2015,"Reconstructed hybrid (P1, hidden)",1.0,1.46,0.0,0.0
+cresci2017,GAT,0.0,95.73,95.95,95.83
+cresci2017,GAT,0.25,95.75,96.06,95.83
+cresci2017,GAT,0.5,95.87,96.04,95.9
+cresci2017,GAT,1.0,95.87,96.16,95.93
+cresci2017,LightGBM (meta+text),0.0,98.08,98.24,98.4
+cresci2017,LightGBM (meta+text),0.25,88.0,88.59,87.84
+cresci2017,LightGBM (meta+text),0.5,75.43,75.45,75.64
+cresci2017,LightGBM (meta+text),1.0,40.36,41.26,38.9
+cresci2017,RGF (proposed),0.0,97.06,97.14,97.65
+cresci2017,RGF (proposed),0.25,96.82,96.76,97.25
+cresci2017,RGF (proposed),0.5,96.3,96.23,96.63
+cresci2017,RGF (proposed),1.0,94.99,93.82,94.59
+cresci2017,RGF concat fusion,0.0,97.94,97.77,97.92
+cresci2017,RGF concat fusion,0.25,93.28,91.33,95.16
+cresci2017,RGF concat fusion,0.5,85.55,79.71,90.53
+cresci2017,RGF concat fusion,1.0,55.41,46.06,77.16
+cresci2017,RGF w/o gate (mean of experts),0.0,97.4,97.19,97.85
+cresci2017,RGF w/o gate (mean of experts),0.25,96.55,96.22,97.05
+cresci2017,RGF w/o gate (mean of experts),0.5,95.16,94.4,95.58
+cresci2017,RGF w/o gate (mean of experts),1.0,88.46,86.36,91.86
+cresci2017,RGF w/o modality dropout,0.0,96.93,97.12,97.68
+cresci2017,RGF w/o modality dropout,0.25,96.88,97.02,97.42
+cresci2017,RGF w/o modality dropout,0.5,96.62,96.67,97.33
+cresci2017,RGF w/o modality dropout,1.0,96.12,95.39,96.38
+cresci2017,"Reconstructed hybrid (P1, hidden)",0.0,97.6,97.69,97.64
+cresci2017,"Reconstructed hybrid (P1, hidden)",0.25,93.85,94.1,89.72
+cresci2017,"Reconstructed hybrid (P1, hidden)",0.5,90.78,88.79,79.53
+cresci2017,"Reconstructed hybrid (P1, hidden)",1.0,82.03,75.62,48.99

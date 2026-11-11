@@ -1,0 +1,15 @@
+TABLE XI. Computational cost on CPU (mean ± SD over 5 seeds, transductive)
+
+| Method | Fit (s) C-17 | Infer. (ms/1k) C-17 | Size C-17 | Fit (s) C-15 | Infer. (ms/1k) C-15 | Size C-15 |
+|---|---|---|---|---|---|---|
+| LightGBM | 11.2 ± 1.9 | 9.9 ± 2.3 | 196.6 trees | 4.0 ± 0.1 | 4.5 ± 0.3 | 89.8 trees |
+| XGBoost | 18.5 ± 3.7 | 5.0 ± 0.9 | 334.0 trees | 6.3 ± 0.9 | 3.3 ± 0.3 | 137.2 trees |
+| Random forest | 30.4 ± 0.5 | 41.1 ± 1.4 | 500.0 trees | 11.4 ± 0.1 | 46.1 ± 1.2 | 500.0 trees |
+| GCN | 23.1 ± 6.2 | 4.9 ± 0.1 | 25,026 | 2.5 ± 0.8 | 2.1 ± 0.7 | 25,026 |
+| GraphSAGE | 20.1 ± 2.0 | 6.6 ± 0.1 | 49,986 | 4.3 ± 0.9 | 2.3 ± 0.0 | 49,986 |
+| GAT | 107.5 ± 2.5 | 7.1 ± 0.2 | 25,158 | 17.7 ± 1.6 | 2.1 ± 0.2 | 25,158 |
+| R-GCN (BotRGCN-style) | — | — | — | 3.6 ± 0.6 | 2.8 ± 0.3 | 53,890 |
+| Hybrid P1-h | 20.3 ± 0.6 | 10.4 ± 0.6 | 25,026 | 6.7 ± 0.3 | 7.4 ± 0.8 | 25,026 |
+| RGF (proposed) | 43.2 ± 5.8 | 10.2 ± 0.2 | 38,089* | 9.4 ± 0.8 | 4.9 ± 0.2 | 38,089* |
+
+*Kaggle CPU session; fit time includes early stopping; inference in milliseconds per 1,000 accounts. Size = trainable parameters for neural models and number of trees for tree models (not comparable units). *Parameters used by RGF; the checkpoint registers 50,571 because it also holds a 12,482-parameter head used only by the concatenation ablation.*

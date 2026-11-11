@@ -1,0 +1,20 @@
+dataset,method,mean_rank,min_rank,max_rank
+cresci2017,GAT,7.2,7.0,8.0
+cresci2017,GCN,7.8,7.0,8.0
+cresci2017,GraphSAGE,2.6,1.0,3.0
+cresci2017,LightGBM (meta+text),2.0,1.0,3.0
+cresci2017,RGF (proposed),5.8,5.0,6.0
+cresci2017,Random Forest (meta+text),4.0,4.0,4.0
+cresci2017,"Reconstructed hybrid (P1, hidden)",5.2,5.0,6.0
+cresci2017,XGBoost (meta+text),1.4,1.0,2.0
+cresci2017,Friedman test,33.400000000000006,2.22986094246894e-05,
+cresci2015,BotRGCN-style R-GCN,5.0,2.0,7.0
+cresci2015,GAT,8.4,8.0,9.0
+cresci2015,GCN,8.6,8.0,9.0
+cresci2015,GraphSAGE,5.8,4.0,7.0
+cresci2015,LightGBM (meta+text),4.0,3.0,6.0
+cresci2015,RGF (proposed),4.8,2.0,7.0
+cresci2015,Random Forest (meta+text),3.8,2.0,6.0
+cresci2015,"Reconstructed hybrid (P1, hidden)",1.2,1.0,2.0
+cresci2015,XGBoost (meta+text),3.4,1.0,6.0
+cresci2015,Friedman test,29.76000000000002,0.00023304981255944595,

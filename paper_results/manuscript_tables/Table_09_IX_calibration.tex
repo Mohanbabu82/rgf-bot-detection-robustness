@@ -1,0 +1,24 @@
+\begin{table*}[!t]
+\caption{Calibration on the test split (mean $\pm$ SD over 5 seeds)}
+\label{tab:calibration}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\hline
+Method & ECE C-17 (\%) & Brier C-17 & ECE C-15 (\%) & Brier C-15 \\
+\hline
+LightGBM & 0.95 $\pm$ 0.23 & 0.0202 $\pm$ 0.0014 & 1.15 $\pm$ 0.21 & 0.0197 $\pm$ 0.0029 \\
+XGBoost & 0.87 $\pm$ 0.13 & 0.0194 $\pm$ 0.0012 & 1.26 $\pm$ 0.34 & 0.0192 $\pm$ 0.0030 \\
+Random forest & 8.72 $\pm$ 0.24 & 0.0402 $\pm$ 0.0009 & 10.42 $\pm$ 0.49 & 0.0360 $\pm$ 0.0019 \\
+GCN & 1.57 $\pm$ 0.15 & 0.0519 $\pm$ 0.0019 & 1.71 $\pm$ 0.33 & 0.0268 $\pm$ 0.0054 \\
+GraphSAGE & 1.02 $\pm$ 0.29 & 0.0235 $\pm$ 0.0011 & 1.46 $\pm$ 0.23 & 0.0217 $\pm$ 0.0022 \\
+GAT & 1.27 $\pm$ 0.31 & 0.0502 $\pm$ 0.0015 & 1.74 $\pm$ 0.32 & 0.0271 $\pm$ 0.0029 \\
+R-GCN (BotRGCN-style) & -- & -- & 1.66 $\pm$ 0.27 & 0.0216 $\pm$ 0.0041 \\
+Hybrid P1-h & 1.10 $\pm$ 0.34 & 0.0275 $\pm$ 0.0014 & 1.00 $\pm$ 0.20 & 0.0170 $\pm$ 0.0016 \\
+\textbf{RGF (proposed)} & \textbf{1.17 $\pm$ 0.15} & \textbf{0.0330 $\pm$ 0.0021} & \textbf{1.71 $\pm$ 0.38} & \textbf{0.0193 $\pm$ 0.0013} \\
+RGF before temperature scaling & 1.05 $\pm$ 0.17 & 0.0329 $\pm$ 0.0021 & 1.54 $\pm$ 0.37 & 0.0191 $\pm$ 0.0013 \\
+RGF temperature T & 1.01 $\pm$ 0.09 &  & 0.98 $\pm$ 0.16 &  \\
+\hline
+\end{tabular}
+\par\smallskip\parbox{\linewidth}{\scriptsize ECE: 15 equal-width bins of predicted-class confidence. Only RGF applies temperature scaling, with T chosen on the same validation split used for early stopping; on both datasets ECE and Brier score are slightly higher after scaling, a change within seed variation (paired t, p = 0.38 and 0.27).}
+\end{table*}
